@@ -1,0 +1,79 @@
+.shoes {
+  width: 19%;
+  padding: 29px;
+  background: #ffffff;
+  border: 1px solid #f3f3f3;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 40px;
+  @media(max-width:1400px){
+    width: 23%;
+  }
+  @media(max-width:1200px){
+    width: 32%;
+  }
+  @media(max-width:992px){
+    width: 47%;
+  }
+  @media(max-width:480px){
+    width: 97%;
+  }
+  &:hover {
+    background: #ffffff;
+    border: 1px solid #f8f8f8;
+    box-shadow: 0px 14px 30px rgba(0, 0, 0, 0.05);
+    border-radius: 40px;
+  }
+  &-img {
+    width: 133px;
+    height: 112px;
+  }
+
+  &-love {
+    position: absolute;
+    top: 18%;
+    left: 18%;
+    cursor: pointer;
+  }
+  h3 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    color: #000000;
+    margin-top: 14px;
+  }
+  &-bottom {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 14px;
+    &-price {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+.remove{
+  position: absolute;
+  top: 10%;
+  right: 10%;
+  cursor: pointer;
+}
+.plus{
+  font-size: 25px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.minus{
+  font-size: 25px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-right: 10px;
+}

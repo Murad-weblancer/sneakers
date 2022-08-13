@@ -1,0 +1,19 @@
+.category{
+    display: flex;
+    align-items: center;
+    flex-wrap:wrap ;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    li{
+        font-size: 20px;
+        font-weight: 700;
+        margin-left: 10%;
+        cursor: pointer;
+    }
+    li:first-child{
+        margin-left: 0;
+    }
+    .active{
+        border-bottom: 3px solid black;
+    }
+}

@@ -1,0 +1,33 @@
+.search{
+    display: flex;
+    align-content: inherit;
+    position: relative;
+    @media(max-width:992px){
+       width: 100%;
+       margin: 30px 0;
+    }
+    &-input{
+        border: 1px solid gray;
+        outline: none;
+        width: 400px;
+        height: 60px;
+        padding-left: 25px;
+        font-size: 18px;
+        border-radius: 12px;
+        @media(max-width:1200px){
+            width: 300px;
+            height: 50px;
+        }
+        @media(max-width:992px){
+            width: 400px;
+            height: 60px;
+        }
+
+    }
+    &-img{
+        position: absolute;
+        top: 33%;
+        right: 5%;
+        cursor: pointer;
+    }
+}
