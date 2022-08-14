@@ -1,7 +1,8 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { getProduct, getSingleCart, removeFavorite, removeProduct, selectFavorite } from "../../redux/slices/cartSlice";
+import { getProduct,removeFavorite, removeProduct, selectFavorite } from "../../redux/slices/cartSlice";
+import { getSingle } from "../../redux/slices/filterSlice";
 
 import "./Shoes.scss";
 export const Shoes = ({ title, imageUrl, price, id }) => {
@@ -9,7 +10,6 @@ export const Shoes = ({ title, imageUrl, price, id }) => {
   const someFave = favorites.some((obj) => obj.id === id);
   const someProduct = products.some(obj=>obj.id === id)
   const dispatch = useDispatch();
-  console.log(someProduct);
   const navigate = useNavigate()
 
   const addToFavorite = () => {
@@ -29,6 +29,12 @@ export const Shoes = ({ title, imageUrl, price, id }) => {
     }
   }
 
+  const addSinglePage = () =>{
+    const products = { title, imageUrl, price, id };
+    dispatch(getSingle(products))
+    navigate('/single')
+  }
+
 
   return (
     <div className="shoes">
@@ -40,7 +46,7 @@ export const Shoes = ({ title, imageUrl, price, id }) => {
         />
       </div>
 
-      <img src={imageUrl} alt="" className="shoes-img" />
+      <img src={imageUrl} alt="" className="shoes-img" onClick={addSinglePage} />
       <h3>{title}</h3>
       <div className="shoes-bottom">
         <div className="shoes-bottom-price">

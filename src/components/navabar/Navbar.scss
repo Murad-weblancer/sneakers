@@ -40,5 +40,27 @@
         span{
           margin: 0 15px;
         }
+        &-cart{
+          // width: 100%;
+          // border: 1px solid black;
+          height: 100%;
+          position: relative;
+          span{
+            position: absolute;
+            top: -70%;
+            left: 1%;
+          }
+        }
+        &-favorite{
+          // width: 100%;
+          // border: 1px solid black;
+          height: 100%;
+          position: relative;
+          span{
+            position: absolute;
+            top: -70%;
+            left: 1%;
+          }
+        }
     }
 }

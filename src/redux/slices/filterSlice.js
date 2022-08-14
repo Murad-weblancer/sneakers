@@ -5,7 +5,8 @@ const filterSlice = createSlice({
   initialState: {
     categoryId: 0,
     searchValue:'',
-    page:1
+    page:1,
+    singlePage:null
   },
   reducers: {
     getCategory(state, action) {
@@ -17,8 +18,11 @@ const filterSlice = createSlice({
     getPage(state,action){
       state.page = action.payload
     },
+    getSingle(state,action){
+        state.singlePage = action.payload
+    }
   },
 });
-export const { getCategory, getValue, getPage } = filterSlice.actions;
+export const { getCategory, getValue, getPage,getSingle } = filterSlice.actions;
 
 export default filterSlice.reducer;
